@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stress1-ng-deployment
+  labels:
+    app: stress1-ng-deployment
+    instana-autotrace: "true"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stress1-ng-webserver
+  template:
+    metadata:
+      labels:
+        app: stress1-ng-webserver
+    spec:
+      containers:
+      - name: stress1-ng-flaskwebserver
+        image: mbx1010/flask-app
+        resources:
+          limits:
+            cpu: 200m
+            memory: 250Mi
+          requests:
+            cpu: 100m
+            memory: 120Mi
+        ports:
+        - containerPort: 8080
+
+      - name: stress1-ng
+        image: alexeiled/stress-ng
+        command: ["/stress-ng"]
+        args:
+          - "-c"
+          - "150"
+          - "-l"
+          - "100"
+          - "-v"
+        resources:
+          limits:
+            cpu: 200m
+            memory: 250Mi
+          requests:
+            cpu: 100m
+            memory: 250Mi
