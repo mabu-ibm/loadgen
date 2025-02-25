@@ -14,6 +14,7 @@ spec:
     metadata:
       labels:
         app: stress1-ng-webserver
+        instana-autotrace: "true"
     spec:
       containers:
       - image: mbx1010/flask-app
