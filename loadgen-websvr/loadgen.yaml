@@ -23,7 +23,7 @@ spec:
         resources:
           limits:
             cpu: 200m
-            memory: 250Mi
+            memory: 200Mi
           requests:
             cpu: 100m
             memory: 120Mi
@@ -39,8 +39,8 @@ spec:
         name: stress1-ng
         resources:
           limits:
-            cpu: 1200m
-            memory: 634Mi
+            cpu: 200m
+            memory: 200Mi
           requests:
-            cpu: 350m
-            memory: 378Mi
+            cpu: 100m
+            memory: 180Mi
