@@ -31,7 +31,7 @@ spec:
         - -c
         - "150"
         - -l
-        - "100"
+        - "150"
         - -v
         command:
         - /stress-ng
@@ -39,7 +39,7 @@ spec:
         name: stress1-ng
         resources:
           limits:
-            cpu: 200m
+            cpu: 150m
             memory: 200Mi
           requests:
             cpu: 100m
