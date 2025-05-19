@@ -18,9 +18,9 @@ spec:
       containers:
       - args:
         - -c
-        - "150"
+        - "100"
         - -l
-        - "150"
+        - "100"
         - -v
         command:
         - /stress-ng
