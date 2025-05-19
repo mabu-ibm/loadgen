@@ -17,11 +17,17 @@ spec:
     spec:
       containers:
       - args:
-        - -c
-        - "150"
-        - -l
+        - --cpu
+        - "0"
+        - --cpu-load
         - "100"
-        - -v
+        - --sched
+        - --metrics-brief
+#        - -c
+#        - "150"
+#        - -l
+#        - "100"
+#        - -v
         command:
         - /stress-ng
         image: alexeiled/stress-ng
