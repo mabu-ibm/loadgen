@@ -18,7 +18,7 @@ spec:
       containers:
       - args:
         - -c
-        - "120"
+        - "150"
         - -l
         - "100"
         - -v
