@@ -16,7 +16,7 @@ spec:
         app: stress1-ng-webserver
     spec:
       nodeSelector:
-            region: node2
+            region: node1
       containers:
       - args:
         - -c
