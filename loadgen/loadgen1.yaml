@@ -6,6 +6,8 @@ metadata:
     instana-autotrace: "true"
   name: stress1-ng-deployment
 spec:
+  nodeSelector:
+     region: node1
   replicas: 1
   selector:
     matchLabels:
@@ -29,8 +31,8 @@ spec:
         resources:
           limits:
             cpu: 100m
-            memory: 150Mi
+            memory: 200Mi
           requests:
             cpu: 50m
-            memory: 200Mi
+            memory: 100Mi
             
